@@ -1,0 +1,88 @@
+/* reset
+
+Por defecto el navegador tiene estilos
+Debemos eliminar los estilos del navegador
+ */
+
+/* en css * = TODO */
+/* RESET BASICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(47, 88%, 63%);
+    font-family: "Figtree", sans-serif;
+}
+
+main {
+    display: flex;
+    /* modificamos la altura del main */
+    height: 100vh;
+    /* permite alinear el container horizontalmente */
+    justify-content: center;
+    /* alinear el container verticalmente */
+    align-items: center;
+    
+}
+
+.container {
+    background-color: #fff;
+    border: solid 1.5px;
+    border-radius: 15px;
+    box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+    padding: 15px;
+}
+
+.second-container {
+    display: flex;
+    flex-direction: column;
+    /* permite colocar un espacio entre items */
+    gap: 10px;
+}
+
+img {
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+button{
+    font-family: "Figtree", sans-serif;
+    width: 20%;
+    background-color: hsl(47, 88%, 63%);
+    border: none;
+    padding: 5px;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+.date {
+    font-size: 14px;
+}
+
+p{
+    width: 25ch;
+    line-height: 1.5;
+    color: hsl(0, 0%, 42%);
+
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author > img {
+    width: 40px;
+}
+
+.author > span {
+    font-size: 14px;
+    font-weight: bold;
+}
