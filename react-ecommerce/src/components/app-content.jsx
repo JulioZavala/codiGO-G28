@@ -21,7 +21,7 @@ import useCartStore from "@/stores/useCartStore";
 function AppContent({ children, showFilter = true }) {
   const { getTotalItem } = useCartStore((state) => state);
 
-  const { user } = useUserStore();
+  const { user, logout } = useUserStore();
 
   return (
     <SidebarProvider>
@@ -60,7 +60,7 @@ function AppContent({ children, showFilter = true }) {
                 <DropdownMenuItem>Profile</DropdownMenuItem>
                 <DropdownMenuItem>Billing</DropdownMenuItem>
                 <DropdownMenuItem>Team</DropdownMenuItem>
-                <DropdownMenuItem>Subscription</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => logout()}>Logout</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
             <Link to={"/summary"} className="block relative">

@@ -1,16 +1,26 @@
 import ProductCard from "./product-card";
+import ProductsEmpty from "./products-empty";
+import ProductsLoading from "./products-loading";
 
-function Products({ products }) {
+function Products({ products, isLoading }) {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-10">
-      {products.length > 0 ? (
-        products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))
+    <>
+      {isLoading ? (
+        <ProductsLoading />
       ) : (
-        <p>No hay productos para mostrar.</p>
+        <>
+          {products.length > 0 ? (
+            <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+              {products.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          ) : (
+            <ProductsEmpty />
+          )}
+        </>
       )}
-    </div>
+    </>
   );
 }
 

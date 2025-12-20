@@ -6,6 +6,7 @@ import { toast } from "sonner";
 
 function Home() {
   const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
 
   // const handleGetProducts = async () => {
@@ -20,10 +21,12 @@ function Home() {
 
       if (!ok) {
         toast.error(message);
+        setIsLoading(false);
         return;
       }
 
       setProducts(data);
+      setIsLoading(false);
     };
 
     // Llamar a la función
