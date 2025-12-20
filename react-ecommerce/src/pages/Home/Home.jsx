@@ -38,7 +38,7 @@ function Home() {
       <AppContent>
         {/* Children */}
         <h1 className="text-2xl">Productos</h1>
-        <Products products={products} />
+        <Products products={products} isLoading={isLoading} />
       </AppContent>
     </div>
   );
