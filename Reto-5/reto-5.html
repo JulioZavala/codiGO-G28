@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body class="bg-gray-100">
+    <main class="p-6 space-y-5 max-h-[80vh] overflow-auto"></main>
+    <div class="bg-white p-4 rounded-lg absolute bottom-0 w-full">
+      <form class="space-y-5">
+        <div>
+          <textarea
+            name="comment"
+            class="border outline-none border-gray-300 resize-none rounded-lg w-full p-3"
+            placeholder="Add a comment..."
+            rows="4"
+            id=""
+          ></textarea>
+          <span id="error-text" class="text-red-500 text-xs hidden"
+            >Por favor, completo este campo</span
+          >
+        </div>
+        <div class="flex items-center justify-between">
+          <img src="./images/avatars/image-juliusomo.png" width="40" alt="" />
+          <button
+            type="submit"
+            class="bg-purple-700 text-white font-semibold px-6 py-2 rounded-lg"
+          >
+            SEND
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="./data.js"></script>
+    <script src="./reto-5.js"></script>
+  </body>
+</html>

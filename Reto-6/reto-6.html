@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#03012d] text-white">
+    <main class="p-10 space-y-14">
+      <section class="space-y-14">
+        <h1 class="text-6xl font-semibold text-center">
+          How's the sky looking today?
+        </h1>
+        <form class="space-y-5">
+          <input
+            type="text"
+            name="place"
+            required
+            class="bg-[#3d3b5e] w-full px-4 py-3 rounded-lg outline-none"
+            placeholder="Search for a place"
+          />
+          <button
+            type="submit"
+            class="w-full cursor-pointer bg-[#4455da] px-4 py-3 rounded-lg text-lg font-semibold"
+          >
+            Search
+          </button>
+        </form>
+      </section>
+      <section
+        id="weather-main"
+        class="bg-[#4455da] p-6 rounded-lg hidden"
+      ></section>
+      <section id="weather-detail" class="grid grid-cols-2 gap-8"></section>
+      <h3 class="text-2xl font-semibold mb-4">Daily forecast</h3>
+      <section id="weather-forecast" class="grid grid-cols-3 gap-6"></section>
+    </main>
+    <script src="./reto-6.js"></script>
+  </body>
+</html>

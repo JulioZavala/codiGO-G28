@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+    /* scroll horizontal hidden: oculto */
+    overflow-x: hidden;
+}
+
+/* mejor aplicar a todas las a */
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu > div > img {
+    width: 200px;
+}
+
+.menu > ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu>ul > li {
+    padding: 6px;
+    width: 150px;
+    text-align: center;
+
+}
+
+.menu > ul > li:hover {
+    background-color: #fd6f00;
+    border-radius: 6px;
+}
+
+main {
+    margin-top: 40px;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    gap: 25px;
+}
+
+
+.container-reverse{
+    flex-direction: column-reverse;
+}
+
+
+
+.profile {
+    /* border-bottom-left-radius: 50%; */
+    /* border-bottom-right-radius: 50%; */
+    border: #fd6f00 solid 2px;
+    background-color: #fff;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    /* overflow-x: hidden; */
+    /* overflow-y: hidden; */
+}
+
+
+.profile > img {
+    width: 250px;
+    overflow: hidden;
+    /* position: absolute; */
+    /* top: -90px; */
+    /* object-fit: cover; */
+}
+
+
+
+
+.social-media {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gretting {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.full-name {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fd6f00;
+}
+
+.title {
+    font-size: 70px;
+    line-height: 1;
+     margin-bottom: 30px;
+}
+
+.description {
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.btn-primary {
+    font-family: "Poppins", sans-serif;
+    background-color: #fd6f00;
+    color: #fff;
+    border: none;
+    font-size: 22px;
+    padding: 8px 45px;
+    border-radius: 5px;
+    
+}
+
+.btn-white {
+    background-color: #f8f8f8;
+    color: #000;
+    margin: 5px;
+}
+
+.btn-white:hover {
+    background-color: #fd6f00;
+    color: #fff
+}
+
+
+.text-2x1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.progress-container > progress {
+    width: 100%;
+    border-radius: 6px;
+    height: 12px;
+}
+
+.progress-container>progress::-webkit-progress-bar {
+    background-color: #edecec;
+    border-radius: 6px;
+}
+
+.progress-container > progress::-webkit-progress-value {
+    background-color: #fd6f00;
+    border-radius: 6px;
+}
+
+
+.container-card-services {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.card-service {
+    background-color: #f8f8f8;
+    color: #000;
+    padding: 18px;
+    border-radius: 14px;
+    width: 330px;
+}
+
+.card-service > img {
+    padding-top: 10px;
+}
+
+.card-service > h3 {
+    padding-top: 10px;
+}
+
+
+.card-service > p {
+    padding-top: 10px;
+    padding-bottom: 36px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.grid-projects {
+  display: grid;
+  gap: 50px;
+}
+
+/* .card {
+  color: #fff;
+} */
+
+.card-images {
+  background-color: #ffebdb;
+  border-radius: 15px;
+  position: relative;
+  width: 445px;
+  height: 489px;
+  text-align: right;
+}
+
+.card-images > div > img {
+  width: 274px;
+}
+
+.card-images > div > img:first-child {
+  position: absolute;
+  bottom: -3px;
+  right: 115px;
+}
+
+.card-images > div > img:last-child {
+  padding-right: 40px;
+  height: 489px;
+  object-fit: cover;
+}
+
+.card-body {
+  margin-top: 30px;
+}
+
+.card-body > p {
+  color: #fd6f00;
+  margin-bottom: 15px;
+}
+
+
+footer {
+  margin-top: 50px;
+}
+
+.container-footer {
+  background-color: #121212;
+  text-align: center;
+  padding: 26px;
+}
+
+.container-footer > p > span {
+  color: #fd6f00;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+/* Crear una condicion para aplicar estilos en desktop */
+/* @media son funciones de css que permiten modificar los estilos
+en base a una medida */
+
+/* Small devices (481px - 768px) */
+@media (min-width: 481px) {
+  /* Tablet pequeña */
+} 
+
+/* Medium devices (769px - 1024px) */
+@media (min-width: 769px) {
+  /* Tablet y laptops pequeñas */
+}
+
+/* Large devices (1025px - 1440px) */
+@media (min-width: 1025px) {
+  /* Desktops estándar */
+}
+
+/* Extra large devices (1441px+) */
+@media (min-width: 1441px) {
+  /* Desktops grandes y 4K */
+}
+
+
+
+@media (min-width: 1025px) {
+    .menu {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 60px;
+    }
+
+    .menu > ul {
+        flex-direction: row;
+        
+    }
+
+    main {
+        max-width: 1400px;
+        margin: auto;
+    }
+    
+    .container {
+        /* cambiar la orientación a horizontal */
+        flex-direction: row;
+        /*
+        propiedad: justify-content: manipula los elementos en el eje x (horizontal)
+        valor: space-between: acomoda los elementos de extremo a extremo
+        |---------------------|
+        | 1                 2 |
+        | 1        2        3 |
+        |---------------------|
+        */
+        /* justify-content: space-between; */
+        /* Definir el ancho maximo de un elemento
+        60% de la pantalla
+        Ejemplo:
+        monitor: 1000px
+        max-width: 600px
+        */
+        /* max-width: 70%; */
+        /* el margin auto sirve para poder centrar el contenido horizontal
+        solomanete si hemos manipulado el ancho del element */
+        /* margin: auto; */
+    }
+    
+    .container > section:first-child {
+        flex-grow: 1;
+    }
+
+    .container > section:last-child {
+        flex-grow: 1;
+    }
+
+
+
+    .gretting {
+        font-size: 25px;
+    }
+
+    .full-name {
+        font-size: 35px;
+    }
+
+    .title {
+        font-size: 100px;
+        width: 660px;
+    }
+
+    .description {
+        font-size: 22px;
+        width: 660px;
+        margin-top: 30px;
+    }
+
+    .container-card-services {
+    flex-direction: row;
+    }
+
+    .grid-projects {
+    /* 3 elementos filas */
+    grid-template-columns: repeat(3, 1fr);
+    }
+
+}

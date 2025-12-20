@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-reto4: #ec775f;
+        --color-blue4: #87bec4;
+      }
+
+      .chart-text {
+        @apply text-xs font-semibold text-gray-400 text-center block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- cual es el alto del main? -->
+    <!-- height: 100vh -> h-screen -->
+    <!-- numero*4
+    p-5 = padding 20px -->
+    <main class="h-dvh bg-[#f9ece1] p-5 flex flex-col justify-center">
+      <div class="flex flex-col gap-5 w-sm mx-auto">
+        <section
+          class="flex items-center bg-reto4 p-5 text-white justify-between rounded-xl"
+        >
+          <div class="space-y-2">
+            <h5>My balance</h5>
+            <p class="text-2xl font-bold">$921.48</p>
+          </div>
+          <img src="./images/logo.svg" alt="" />
+        </section>
+        <section class="bg-white rounded-xl p-5 space-y-10">
+          <h5 class="text-xl font-semibold">Spending - Last 7 days</h5>
+          <div class="flex justify-between items-end">
+            <div class="space-y-1">
+              <div class="bg-reto4 h-10 w-8 rounded"></div>
+              <span class="chart-text">mon</span>
+            </div>
+            <div class="space-y-1">
+              <div class="bg-reto4 h-20 w-8 rounded"></div>
+              <span class="chart-text">tue</span>
+            </div>
+            <div class="space-y-1">
+              <div class="bg-blue4 h-40 w-8 rounded"></div>
+              <span class="chart-text">wed</span>
+            </div>
+            <div class="space-y-1">
+              <div class="bg-reto4 h-16 w-8 rounded"></div>
+              <span class="chart-text">thu</span>
+            </div>
+            <div class="space-y-1">
+              <div class="bg-reto4 h-12 w-8 rounded"></div>
+              <span class="chart-text">fri</span>
+            </div>
+            <div class="space-y-1">
+              <div class="bg-reto4 h-24 w-8 rounded"></div>
+              <span class="chart-text">sat</span>
+            </div>
+            <div class="space-y-1">
+              <div class="bg-reto4 h-12 w-8 rounded"></div>
+              <span class="chart-text">sun</span>
+            </div>
+          </div>
+          <!-- Divider -->
+          <div class="h-[2px] bg-gray-200 rounded"></div>
+          <div class="flex justify-between items-end">
+            <div class="space-y-1">
+              <p class="text-sm text-gray-400">Total this month</p>
+              <h3 class="text-3xl font-semibold">$ 478.33</h3>
+            </div>
+            <div class="space-y-1">
+              <p class="text-right text-sm font-semibold">+2.4%</p>
+              <p class="text-sm text-gray-400">from last month</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

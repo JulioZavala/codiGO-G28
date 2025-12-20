@@ -3,50 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Codigo-G28</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Portfolio</title>
 </head>
-
-<style>
-    body > * {
-        border: solid 3px green
-    }
-
-</style>
 <body>
-    <!-- TITULOS -->
-    <h1>Codigo G28 - FrontEnd</h1>
-    <h2>Titulo 2</h2>
-    <h3>Titulo 3</h3>
-    <h4>Titulo 4</h4>
-    <h5>Titulo 5</h5>
-    <h6>Titulo 6</h6>
-    <!-- PARRAFOS -->
-    <p>Es la etiqueta para contener parrafos.</p>
-    <!-- IMAGES -->
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAh8gec9Zoqw-jjgyFg1VRsQabpytU-hsMgg&s" alt="" />
-    <img src="./Machu-Picchu.jpg" alt="">
+    <!-- Menu de navegación header -->
+    <header>
+        <!-- navegación -->
+         <nav class="menu">
+            <!-- Logo - enlace -->
+             <div>
+                <img src="./assets/icons/logo.svg" alt="Logo de portafolio">
+             </div>
+             <!-- Listado de items (home, about) -->
+             <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About me</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Contact</a></li>
+             </ul>
+         </nav>
+    </header>
+    <!-- La sección principal -->
+    <main>
+        <section class="container  container-reverse">
+            <section>
+                <p class="gretting">Hi I am</p>
+                <p class="full-name">Julio Zavala</p>
+                <h1 class="title">UI & UX Designer</h1>
+                <p class="description">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra.</p>
+                <button class="btn-primary">Hire me</button>
+            </section>
+            <section>
+                <div class="profile">
+                    <img src="./assets/images/1234567.png" alt="Foto de perfil de Julio Zavala">
+                </div>
 
-    <!-- ETIQUETA ANCHOR -->
-    <a href="https://www.youtube.com/watch?v=YlPHo0GNhHQ&list=RDYlPHo0GNhHQ&start_radio=1" target="_blank">Video IA</a>
+                <div class="social-media">
+                        <a href="#">
+                            <img src="./assets/icons/facebook.svg" alt="" width="32" />
+                        </a>
+                        <a href="#">
+                            <img src="./assets/icons/twitter.svg" alt="" width="32" />
+                        </a>
+                        <a href="#">
+                            <img src="/assets/icons/instagram.svg" alt="" width="32" />
+                        </a>
+                        <a href="#">
+                            <img src="./assets/icons/linkedin.svg" alt="" width="32" />
+                        </a>
+                </div>
+            </section>
+        </section>
+        <section class="container">
+            <section>
+                <img src="./assets/images/4865996.png" width="300" alt="">
+            </section>
+            <section class="about-container">
+                <h2 class="text-2x1">About Me</h2>
+                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, architecto totam iusto molestias, ipsa atque praesentium necessitatibus suscipit dolorum modi quos consectetur fuga! Soluta ex beatae blanditiis exercitationem nisi dolores.</p>
+                <div class="progress-container">
+                    <label for="">HTML</label>
+                    <progress max="100" value="80"></progress>
+                </div>
+                <div class="progress-container">
+                    <label for="">CSS</label>
+                    <progress max="100" value="75"></progress>
+                </div>
+                <div class="progress-container">
+                    <label for="">JavaScript</label>
+                    <progress max="100" value="95"></progress>
+                </div>
+                <div class="progress-container">
+                    <label for="">React</label>
+                    <progress max="100" value="90"></progress>
+                </div>
+            </section>
+        </section>
 
-    <!--  LISTAS  -->
-    <!--  LISTA ORDENADA  -->
-    <ol>
-        <li>Casa</li>
-        <li>Perro</li>
-        <li>Celular</li>
-    </ol>
-    <!--  LISTA NO ORDENADA  -->
-    <ul>
-        <li>Fresa</li>
-        <li>Pera</li>
-        <li>Manzana</li>
-    </ul>
+
+        <section class="container">
+            <div class="text-center">
+                
+                <h2 class="text-2x1">Services</h2>
+                <p class="description">Lorem ipsum dolor sit amet consectetur. Trstique amet sed messa nibh lectus netus in.  Aliquet donec morbi convallis pretiun</p>
+            </div>
+        </section>
+        <section class="container">
+                <div class="container-card-services">
+                    <div class="card-service">
+                        <img src="./assets/icons/img_1.svg" alt="">
+                        <h3>UI/UX</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam siam interdum</p>
+                    </div>
+                    <div class="card-service">
+                        <img src="./assets/icons/img_2.svg" alt="">
+                        <h3>Web Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur.
+                             Morbi diam nisi nam siam interdum
+                        </p>
+                    </div>
+                    <div class="card-service">
+                        
+                        <img src="./assets/icons/img_3.svg" alt="">
+                        <h3>App Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur.
+                             Morbi diam nisi nam siam interdum
+                        </p>
+                    </div>
+                    <div class="card-service">
+                        <img src="./assets/icons/img_4.svg" alt="">
+                        <h3>Graphic Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur.
+                             Morbi diam nisi nam siam interdum
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
+
+
+
+
+
+
+        <section class="container">
+            <div class="text-center">
+                <h2 class="text-2x1">Mis Proyectos</h2>
+                <p class="description">Lorem ipsum dolor sit amet consectetur. Mollis erat duis aliuquam mauris est risus lectus. Phasellus consequat urna tellus</p>
+                <div>
+                    <button class="btn-primary btn-white">All</button>
+                    <button class="btn-primary btn-white">UI/UX</button>
+                    <button class="btn-primary btn-white">Web Design</button>
+                    <button class="btn-primary btn-white">App Design</button>
+                    <button class="btn-primary btn-white">Graphic Design</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <!-- Grilla de proyectos -->
+            <div class="grid-projects">
+                <!-- Project card: primer element de grid -->
+                <a class="card" href="">
+                    <!-- Imagenes -->
+                    <div class="card-images">
+                        <div>
+                            <img src="./assets/projects/p1.svg" alt="">
+                            <!-- <img src="./assets/projects/p1-2.svg" alt="">    -->
+                        <div>
+                    </div>
+                    <!-- Textos -->
+                    <div class="card-body">
+                        <p>Web Design</p>
+                        <h3>AirCalling Landing Page Design</h3>
+                    </div>
+                </a>
+                <!-- Segundo element de grid -->
+
+            </div>
+        </section>
+
+    </main>
+    <!-- Pie de página -->
+    <footer>
+        <section class="container">
+            <img src="./assets/icons/logo.svg" width="200" alt="">
+        </section>
+        <section class="container">
+            <nav class="menu p-0">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <!-- Listado de items (home, about) -->
+            </nav>
+        </section>
+        <section class="container">
+            <div class="social-media">
+                <a href="#">
+                    <img src="./assets/icons/facebook.svg" alt="" width="32" />
+                </a>
+                <a href="#">
+                    <img src="./assets/icons/twitter.svg" alt="" width="32" />
+                </a>
+                <a href="#">
+                    <img src="/assets/icons/instagram.svg" alt="" width="32" />
+                </a>
+                <a href="#">
+                    <img src="./assets/icons/linkedin.svg" alt="" width="32" />
+                </a>
+            </div>
+        </section>
+        <section class="container-footer">
+            <p>© 2025 <span>Julio Zavala</span> All Rights Reserved , Inc.</p>
+        </section>
+    </footer>
 </body>
 </html>
-
-
-
-

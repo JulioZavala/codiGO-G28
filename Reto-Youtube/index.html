@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YT Clone</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+        --color-dark: #282828;
+        }
+        
+        .category {
+            @apply text-nowrap bg-dark px-2 py-2 rounded-md cursor-pointer hover:bg-white hover:text-dark;
+        }
+
+        .img-album {
+            @apply w-[104px] h-[104px] lg:w-[180px] lg:h-[180px] object-cover rounded;
+        }
+    </style>
+</head>
+<body class="bg-black text-white p-3 lg:p-10">
+    <header class="flex lg:gap-20 items-center justify-between lg:justify-start">
+        <div class="flex items-center gap-4">
+            <img class="hidden lg:block" src="./assets/menu.svg" alt="" />
+            <img src="./assets/yt-logo.svg" alt="" />
+        </div>
+        <div class="lg:flex lg:flex-1 lg:justify-between">
+            <div class="hidden lg:block">
+            <input
+                type="text"
+                class="bg-dark p-3 border border-white w-[416px] rounded-md outline-none"
+                placeholder="Search..."
+            />
+            </div>
+        </div>
+        <div class="flex gap-5">
+            <button>
+                <img src="./assets/search.svg" alt="">
+            </button>
+            <img src="./assets/avatar.svg" alt="">
+        </div>
+    </header>
+    <div class="lg:flex lg:gap-10 lg:mt-10">
+        <!-- menu vertical -->
+        <aside class="hidden lg:block sticky top-0 overflow-y-auto h-[82vh] w-[232px] border-r-[0.5px]">
+            menu
+        </aside>
+        <main class="mt-10 space-y-10">
+            <!-- categorias -->
+            <section>
+                <ul class="flex gap-5 overflow-auto pb-4 ">
+                <li class="category">Podcast</li>
+                <li class="category">Relajación</li>
+                <li class="category">Energía</li>
+                <li class="category">Fiesta</li>
+                <li class="category">Entretenimiento</li>
+                <li class="category">Para sentirse bien</li>
+                <li class="category">Viaje diario</li>
+                </ul>
+            </section>
+            <!-- Listen again -->
+            <section class="space-y-4">
+                <div class="flex gap-3">
+                    <img src="./assets/avatar.svg" width="32" alt="" />
+                    <div>
+                        <p class="text-xs">Sufyan Ali</p>
+                        <h4 class="font-bold">Listen Again</h4>
+                    </div>
+                </div>
+                <div class="flex gap-2 overflow-x-auto whitespace-nowrap pb-4">
+                    <div class="space-y-2 flex-shrink-0">
+                        <img src="./assets/music-1.svg" class="img-album" alt="" />
+                        <p class="text-xs font-semibold">Baladas</p>
+                    </div>
+                    <div class="space-y-2 flex-shrink-0">
+                        <img
+                        src="https://cdn.wallpapersafari.com/19/49/Cr3tJ0.jpg"
+                        width="104"
+                        class="img-album"
+                        alt=""
+                        />
+                        <p class="text-xs font-semibold">Rock</p>
+                    </div>
+                    <div class="space-y-2 flex-shrink-0">
+                        <img
+                        src="https://f4.bcbits.com/img/a1541842553_16.jpg"
+                        width="104"
+                        class="img-album"
+                        alt=""
+                        />
+                        <p class="text-xs font-semibold">Cumbia</p>
+                    </div>
+                    <div class="space-y-2 flex-shrink-0">
+                        <img
+                        src="https://w0.peakpx.com/wallpaper/338/144/HD-wallpaper-punk-rock-punk-music.jpg"
+                        width="104"
+                        class="img-album"
+                        alt=""
+                        />
+                        <p class="text-xs font-semibold">Punk</p>
+                    </div>
+                    <div class="space-y-2 flex-shrink-0">
+                        <img
+                            src="https://wallpapersok.com/images/high/pop-smoke-galaxy-album-cover-uyr4kh7sg1g6kcsu.jpg"
+                            width="104"
+                            class="img-album"
+                            alt=""
+                        />
+                        <p class="text-xs font-semibold">Pop</p>
+                    </div>
+                </div>
+                <div class="flex gap-2 overflow-x-auto whitespace-nowrap pb-4">
+                    <div class="space-y-2 flex-shrink-0">
+                        <img src="./assets/music-1.svg" width="104" class="img-album" alt="" />
+                        <p class="text-xs font-semibold">Baladas</p>
+                    </div>
+                    <div class="space-y-2 flex-shrink-0">
+                        <img
+                        src="https://cdn.wallpapersafari.com/19/49/Cr3tJ0.jpg"
+                        width="104"
+                        class="img-album"
+                        alt=""
+                        />
+                        <p class="text-xs font-semibold">Rock</p>
+                    </div>
+                    <div class="space-y-2 flex-shrink-0">
+                        <img
+                        src="https://f4.bcbits.com/img/a1541842553_16.jpg"
+                        width="104"
+                        class="img-album"
+                        alt=""
+                        />
+                        <p class="text-xs font-semibold">Cumbia</p>
+                    </div>
+                    <div class="space-y-2 flex-shrink-0">
+                        <img
+                        src="https://w0.peakpx.com/wallpaper/338/144/HD-wallpaper-punk-rock-punk-music.jpg"
+                        width="104"
+                        class="img-album"
+                        alt=""
+                        />
+                        <p class="text-xs font-semibold">Punk</p>
+                    </div>
+                    <div class="space-y-2 flex-shrink-0">
+                        <img
+                            src="https://wallpapersok.com/images/high/pop-smoke-galaxy-album-cover-uyr4kh7sg1g6kcsu.jpg"
+                            width="104"
+                            class="img-album"
+                            alt=""
+                            />
+                            <p class="text-xs font-semibold">Pop</p>
+                    </div>
+                </div>
+
+                                <div class="flex gap-2 overflow-x-auto whitespace-nowrap pb-4">
+                    <div class="space-y-2 flex-shrink-0">
+                        <img src="./assets/music-1.svg" width="104" class="img-album" alt="" />
+                        <p class="text-xs font-semibold">Baladas</p>
+                    </div>
+                    <div class="space-y-2 flex-shrink-0">
+                        <img
+                        src="https://cdn.wallpapersafari.com/19/49/Cr3tJ0.jpg"
+                        width="104"
+                        class="img-album"
+                        alt=""
+                        />
+                        <p class="text-xs font-semibold">Rock</p>
+                    </div>
+                    <div class="space-y-2 flex-shrink-0">
+                        <img
+                        src="https://f4.bcbits.com/img/a1541842553_16.jpg"
+                        width="104"
+                        class="img-album"
+                        alt=""
+                        />
+                        <p class="text-xs font-semibold">Cumbia</p>
+                    </div>
+                    <div class="space-y-2 flex-shrink-0">
+                        <img
+                        src="https://w0.peakpx.com/wallpaper/338/144/HD-wallpaper-punk-rock-punk-music.jpg"
+                        width="104"
+                        class="img-album"
+                        alt=""
+                        />
+                        <p class="text-xs font-semibold">Punk</p>
+                    </div>
+                    <div class="space-y-2 flex-shrink-0">
+                        <img
+                            src="https://wallpapersok.com/images/high/pop-smoke-galaxy-album-cover-uyr4kh7sg1g6kcsu.jpg"
+                            width="104"
+                            class="img-album"
+                            alt=""
+                            />
+                            <p class="text-xs font-semibold">Pop</p>
+                    </div>
+                </div>
+
+                                <div class="flex gap-2 overflow-x-auto whitespace-nowrap pb-4">
+                    <div class="space-y-2 flex-shrink-0">
+                        <img src="./assets/music-1.svg" width="104" class="img-album" alt="" />
+                        <p class="text-xs font-semibold">Baladas</p>
+                    </div>
+                    <div class="space-y-2 flex-shrink-0">
+                        <img
+                        src="https://cdn.wallpapersafari.com/19/49/Cr3tJ0.jpg"
+                        width="104"
+                        class="img-album"
+                        alt=""
+                        />
+                        <p class="text-xs font-semibold">Rock</p>
+                    </div>
+                    <div class="space-y-2 flex-shrink-0">
+                        <img
+                        src="https://f4.bcbits.com/img/a1541842553_16.jpg"
+                        width="104"
+                        class="img-album"
+                        alt=""
+                        />
+                        <p class="text-xs font-semibold">Cumbia</p>
+                    </div>
+                    <div class="space-y-2 flex-shrink-0">
+                        <img
+                        src="https://w0.peakpx.com/wallpaper/338/144/HD-wallpaper-punk-rock-punk-music.jpg"
+                        width="104"
+                        class="img-album"
+                        alt=""
+                        />
+                        <p class="text-xs font-semibold">Punk</p>
+                    </div>
+                    <div class="space-y-2 flex-shrink-0">
+                        <img
+                            src="https://wallpapersok.com/images/high/pop-smoke-galaxy-album-cover-uyr4kh7sg1g6kcsu.jpg"
+                            width="104"
+                            class="img-album"
+                            alt=""
+                            />
+                            <p class="text-xs font-semibold">Pop</p>
+                    </div>
+                </div>
+
+
+            </section>
+        </main>
+    </div>
+</body>
+</html>

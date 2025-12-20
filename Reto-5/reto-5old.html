@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+</head>
+<body class="bg-gray-100">
+    <main class="p-6 space-y-5 max-h-[80vh] overflow-auto">
+      <div class="bg-white p-4 rounded-lg space-y-5">
+            <!-- CABECERA -->
+            <div class="flex items-center gap-7">
+                <img width="40" src="./images/avatars/image-amyrobson.png" alt="" />
+                <p class="font-semibold text-sm">amyrobson</p>
+                <p class="text-sm text-gray-500">1 month ago</p>
+            </div>
+            <!-- COMENTARIO -->
+            <p class="text-gray-500">
+            Impressive! Though it seems the drag feature could be improved. But
+            overall it looks incredible. You've nailed the design and the
+            responsiveness at various breakpoints works really well.
+            </p>
+            <div class="flex justify-between">
+                <div class="flex items-center gap-4 bg-gray-100 px-4 rounded-lg">
+                    <button
+                        onclick="incrementar(this)"
+                        class="text-purple-400 font-semibold">+</button>
+                    <span class="text-purple-500 font-semibold">12</span>
+                    <button
+                        onclick="decrementar(this)"
+                        class="text-purple-400 font-semibold">-</button>
+                </div>
+                    <button class="flex items-center gap-2 text-purple-500 font-semibold">
+                        <img src="./images/icon-reply.svg" alt="" />
+                        Reply
+                    </button>
+            </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg space-y-5">
+        <!-- CABECERA -->
+        <div class="flex items-center gap-7">
+          <img width="40" src="./images/avatars/image-maxblagun.png" alt="" />
+          <p class="font-semibold text-sm">maxblagun</p>
+          <p class="text-sm text-gray-500">2 weeks ago</p>
+        </div>
+        <!-- COMENTARIO -->
+        <p class="text-gray-500">
+          Woah, your project looks awesome! How long have you been coding for?
+          I'm still new, but think I want to dive into React as well soon.
+          Perhaps you can give me an insight on where I can learn React? Thanks!
+        </p>
+        <div class="flex justify-between">
+          <div class="flex items-center gap-4 bg-gray-100 px-4 rounded-lg">
+            <button
+                onclick="incrementar(this)"
+                class="text-purple-400 font-semibold">+</button>
+            <span class="text-purple-500 font-semibold">5</span>
+            <button
+                onclick="decrementar(this)"
+                class="text-purple-400 font-semibold">-</button>
+          </div>
+          <button class="flex items-center gap-2 text-purple-500 font-semibold">
+            <img src="./images/icon-reply.svg" alt="" />
+            Reply
+          </button>
+        </div>
+      </div>
+    </main>
+
+
+
+    <div class="bg-white p-4 rounded-lg absolute bottom-[20px] w-full">
+        <form class="space-y-5">
+            <div>
+                <textarea
+                name="comment"
+                class="border outline-none border-gray-300 resize-none rounded-lg w-full p-3"
+                placeholder="Add a comment..."
+                rows="4"
+                id=""
+                ></textarea>
+                <span id="error-text" class="text-red-500 text-xs hidden">Este campo es obligatorio</span>
+            </div>
+            
+            <div class="flex items-center justify-between">
+                <img src="./images/avatars/image-juliusomo.png" width="40" alt="" />
+                <button
+                    type="submit"
+                    class="bg-purple-700 text-white font-semibold px-6 py-2 rounded-lg"
+                >
+                    SEND
+                </button>
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <script src="./data.js"></script>
+    <script src="./reto-5.js"></script>
+</body>
+</html>
