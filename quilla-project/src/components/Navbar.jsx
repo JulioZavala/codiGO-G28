@@ -3,11 +3,12 @@ import NavMenu from "./NavMenu";
 import NavActions from "./NavActions";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import SideDrawer from "./SideDrawer";
+import SideDrawer from "@/components/SideDrawer";
 import MobileMenuContent from "./MobileMenuContent";
 import { Menu } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useScrollThreshold } from "@/hooks/useScrollThreshold";
+import UserContent from "@/components/UserContent";
 
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -93,16 +94,7 @@ const Navbar = () => {
           </div>
         )}
 
-        {activeDrawer === "user" && (
-          <div className="flex flex-col gap-4">
-            <button className="bg-black text-white py-4 uppercase text-xs font-bold tracking-widest">
-              Iniciar Sesión
-            </button>
-            <button className="border border-black py-4 uppercase text-xs font-bold tracking-widest">
-              Crear Cuenta
-            </button>
-          </div>
-        )}
+        {activeDrawer === "user" && <UserContent />}
 
         {activeDrawer === "cart" && (
           <div className="h-full flex flex-col justify-center items-center text-center">

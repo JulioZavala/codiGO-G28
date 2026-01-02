@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import { Search, User, ShoppingBag } from "lucide-react";
+import useUserStore from "@/stores/useUserStore";
 
 const NavActions = ({ onOpenDrawer }) => {
   const cartCount = 19;
+  const { user } = useUserStore();
+
   return (
     <div className="flex justify-end  gap-1.5 lg:flex-col">
       {/* BUSCADOR */}
@@ -19,7 +22,13 @@ const NavActions = ({ onOpenDrawer }) => {
         className="flex justify-end items-center gap-1.5 hover:opacity-50 transition-opacity"
       >
         <User size={22} strokeWidth={1.5} />
-        <span className="hidden lg:block">Mi Cuenta</span>
+        <span className="hidden lg:block">
+          {
+            user
+              ? `${user.firstname} ${user.lastname}` // Si hay usuario
+              : "Mi Cuenta" // Si no hay usuario
+          }
+        </span>
       </button>
       {/* CARRITO (Shopping Bag) */}
       <button
