@@ -19,7 +19,7 @@ export const NAVIGATION_DATA = [
   {
     id: 2,
     label: "Mujer",
-    img: "/src/assets/images/mujer.jpg",
+    img: "/src/assets/images/mujer_S.png",
     items: [
       {
         id: 2.1,
@@ -54,7 +54,7 @@ export const NAVIGATION_DATA = [
   {
     id: 3,
     label: "Hombre",
-    img: "/src/assets/images/hombre.jpg",
+    img: "/src/assets/images/hombre_S.png",
     items: [
       {
         id: 3.1,

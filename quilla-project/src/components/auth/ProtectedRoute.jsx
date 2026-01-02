@@ -1,7 +1,7 @@
 import { Navigate, useLocation, Outlet } from "react-router-dom";
-import useUserStore from "@/stores/useStore";
+import useUserStore from "@/stores/useUserStore";
 
-const ProtectedRoute = () => {
+const ProtectedRoute = ({ children }) => {
   // 1. LÓGICA DE VERIFICACIÓN
   const { isAuthenticated } = useUserStore();
 
@@ -12,11 +12,11 @@ const ProtectedRoute = () => {
     // Si no está logueado, lo mandamos al login.
     // 'state={{ from: location }}' sirve para que, tras loguearse,
     // puedas redirigirlo automáticamente a donde quería ir (Carrito o Cuenta).
-    return <Navigate to="/login" state={{ from: location }} replace />;
+    return <Navigate to="/" state={{ from: location }} replace />;
   }
 
   // 3. ACCESO PERMITIDO
-  return <Outlet />;
+  return children;
 };
 
 export default ProtectedRoute;

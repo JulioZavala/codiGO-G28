@@ -19,8 +19,8 @@ const Home = () => {
 
       {/* SECCIÓN 2: LINKS PRINCIPALES (Hombre/Mujer - Estilo Renzo Costa) */}
       <section className="flex flex-col lg:flex-row justify-around gap-3 lg:gap-5 px-3 lg:px-5 py-3 lg:py-5 bg-gray-50 text-center font-bold text-2xl tracking-widest uppercase">
-        <div className="w-full">[link 1]</div>
-        <div className="w-full">[link 2]</div>
+        <div className="w-full"><img src="./src/assets/images/mujer_L.png" alt="img_mujer" className="w-full" /></div>
+        <div className="w-full"><img src="./src/assets/images/hombre_L.png" alt="img_hombre" className="w-full" /></div>
       </section>
 
       {/* SECCIÓN 3: NUESTROS FAVORITOS */}
