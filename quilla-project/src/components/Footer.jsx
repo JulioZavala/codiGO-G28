@@ -120,7 +120,7 @@ const Footer = () => {
           <div className="flex gap-4 justify-center">
             <Link to="/libroreclamaciones" className="flex items-center">
               <img
-                src="/src/assets/images/icons/libro.svg"
+                src="./src/assets/images/icons/libro.svg"
                 alt="Libro de Reclamaciones"
                 className="h-15 invert brightness-0 opacity-50 hover:opacity-100 transition-opacity"
               />
