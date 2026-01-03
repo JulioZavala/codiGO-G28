@@ -58,12 +58,9 @@ const CategoryPage = () => {
           {/* Regla para tablets y escritorio (md = 768px en Tailwind).
             Si la pantalla es ancha, usa esta imagen.
           */}
-          <source
-            media="(min-width: 768px)"
-            srcSet="/src/assets/images/header_d.webp"
-          />
+          <source media="(min-width: 768px)" srcSet="/images/header_d1.png" />
           <img
-            src="/src/assets/images/header_m.webp"
+            src="/images/header_m1.png"
             alt=""
             className="w-full h-full object-cover opacity-90"
           />
