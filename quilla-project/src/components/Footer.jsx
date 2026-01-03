@@ -88,28 +88,28 @@ const Footer = () => {
             <div className="flex gap-3 items-center invert brightness-0">
               <a href="#" className="w-10 h-10 p-1 flex ">
                 <img
-                  src="/src/assets/images/icons/tiktok.svg"
+                  src="./src/assets/images/icons/tiktok.svg"
                   alt="tiktok"
                   className="h-6 opacity-50 hover:opacity-100 transition-opacity"
                 />
               </a>
               <a href="#" className="w-10 h-10 p-1 rounded-sm">
                 <img
-                  src="/src/assets/images/icons/instagram.svg"
+                  src="./src/assets/images/icons/instagram.svg"
                   alt="instagram"
                   className="opacity-50 hover:opacity-100 transition-opacity"
                 />
               </a>
               <a href="#" className="w-10 h-10 p-1 rounded-sm">
                 <img
-                  src="/src/assets/images/icons/facebook.svg"
+                  src="./src/assets/images/icons/facebook.svg"
                   alt="facebook"
                   className="opacity-50 hover:opacity-100 transition-opacity"
                 />
               </a>
               <a href="#" className="w-10 h-10 p-1 rounded-sm">
                 <img
-                  src="/src/assets/images/icons/youtube.svg"
+                  src="./src/assets/images/icons/youtube.svg"
                   alt="youtube"
                   className="opacity-50 hover:opacity-100 transition-opacity"
                 />
