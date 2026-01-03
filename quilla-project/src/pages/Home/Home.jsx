@@ -6,8 +6,8 @@ const Home = () => {
       {/* SECCIÓN 1: HERO BANNER */}
       <HeroBanner
         // Reemplaza esta URL con una foto de campaña real de alta calidad
-        desktopImageSrc="/src/assets/images/hero_verano_desktop.png"
-        mobileImageSrc="/src/assets/images/hero_verano_mobile.png"
+        desktopImageSrc="/images/hero_verano_desktop.png"
+        mobileImageSrc="/images/hero_verano_mobile.png"
         title="Colección Verano 2026"
         subtitle="Descubre la comodidad del cuero en cada detalle."
         ctaLink="/novedades"
