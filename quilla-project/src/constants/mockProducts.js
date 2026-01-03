@@ -11,8 +11,8 @@ export const MOCK_PRODUCTS = [
     discount: null,
     stock_quantity: 1,
     images: [
-      "/src/assets/images/prod/Hombre/accesorios/billeteras/P101061CBAA1000/P101061CBAA1000_1.jpg",
-      "/src/assets/images/prod/Hombre/accesorios/billeteras/P101061CBAA1000/P101061CBAA1000_2.jpg",
+      "/images/prod/Hombre/accesorios/billeteras/P101061CBAA1000/P101061CBAA1000_1.jpg",
+      "/images/prod/Hombre/accesorios/billeteras/P101061CBAA1000/P101061CBAA1000_2.jpg",
     ],
     attributes: {
       color: "black",
@@ -31,10 +31,10 @@ export const MOCK_PRODUCTS = [
     discount: "15%",
     stock_quantity: 34,
     images: [
-      "/src/assets/images/prod/mujer/bolsos/shoulder/P010379CHC50000/P010379CHC50000_1.jpg",
-      "/src/assets/images/prod/mujer/bolsos/shoulder/P010379CHC50000/P010379CHC50000_2.jpg",
-      "/src/assets/images/prod/mujer/bolsos/shoulder/P010379CHC50000/P010379CHC50000_3.jpg",
-      "/src/assets/images/prod/mujer/bolsos/shoulder/P010379CHC50000/P010379CHC50000_4.jpg",
+      "/images/prod/mujer/bolsos/shoulder/P010379CHC50000/P010379CHC50000_1.jpg",
+      "/images/prod/mujer/bolsos/shoulder/P010379CHC50000/P010379CHC50000_2.jpg",
+      "/images/prod/mujer/bolsos/shoulder/P010379CHC50000/P010379CHC50000_3.jpg",
+      "/images/prod/mujer/bolsos/shoulder/P010379CHC50000/P010379CHC50000_4.jpg",
     ],
     attributes: {
       color: "black",
@@ -52,13 +52,13 @@ export const MOCK_PRODUCTS = [
     discount: null,
     stock_quantity: 34,
     images: [
-      "/src/assets/images/prod/Hombre/casacas/1031303-02/1031303-02-01-Chaqueta-de-cuero.jpg",
-      "/src/assets/images/prod/Hombre/casacas/1031303-02/1031303-02-02-Chaqueta-de-cuero.jpg",
-      "/src/assets/images/prod/Hombre/casacas/1031303-02/1031303-02-03-Chaqueta-de-cuero.jpg",
-      "/src/assets/images/prod/Hombre/casacas/1031303-02/1031303-02-04-Chaqueta-de-cuero.jpg",
-      "/src/assets/images/prod/Hombre/casacas/1031303-02/1031303-02-05-Chaqueta-de-cuero.jpg",
-      "/src/assets/images/prod/Hombre/casacas/1031303-02/1031303-02-06-Chaqueta-de-cuero.jpg",
-      "/src/assets/images/prod/Hombre/casacas/1031303-02/1031303-02-07-Chaqueta-de-cuero.jpg",
+      "/images/prod/Hombre/casacas/1031303-02/1031303-02-01-Chaqueta-de-cuero.jpg",
+      "/images/prod/Hombre/casacas/1031303-02/1031303-02-02-Chaqueta-de-cuero.jpg",
+      "/images/prod/Hombre/casacas/1031303-02/1031303-02-03-Chaqueta-de-cuero.jpg",
+      "/images/prod/Hombre/casacas/1031303-02/1031303-02-04-Chaqueta-de-cuero.jpg",
+      "/images/prod/Hombre/casacas/1031303-02/1031303-02-05-Chaqueta-de-cuero.jpg",
+      "/images/prod/Hombre/casacas/1031303-02/1031303-02-06-Chaqueta-de-cuero.jpg",
+      "/images/prod/Hombre/casacas/1031303-02/1031303-02-07-Chaqueta-de-cuero.jpg",
     ],
     attributes: {
       color: "tan",
@@ -77,10 +77,10 @@ export const MOCK_PRODUCTS = [
     discount: "20%",
     stock_quantity: 27,
     images: [
-      "/src/assets/images/prod/mujer/accesorios/morral/P010406BWAI4000/P010406BWAI4000_1.jpg",
-      "/src/assets/images/prod/mujer/accesorios/morral/P010406BWAI4000/P010406BWAI4000_2.jpg",
-      "/src/assets/images/prod/mujer/accesorios/morral/P010406BWAI4000/P010406BWAI4000_3.jpg",
-      "/src/assets/images/prod/mujer/accesorios/morral/P010406BWAI4000/P010406BWAI4000_4.jpg",
+      "/images/prod/mujer/accesorios/morral/P010406BWAI4000/P010406BWAI4000_1.jpg",
+      "/images/prod/mujer/accesorios/morral/P010406BWAI4000/P010406BWAI4000_2.jpg",
+      "/images/prod/mujer/accesorios/morral/P010406BWAI4000/P010406BWAI4000_3.jpg",
+      "/images/prod/mujer/accesorios/morral/P010406BWAI4000/P010406BWAI4000_4.jpg",
     ],
     attributes: {
       color: "cognac",
@@ -98,9 +98,9 @@ export const MOCK_PRODUCTS = [
     discount: "50%",
     stock_quantity: 13,
     images: [
-      "/src/assets/images/prod/unisex/billeteras/P101436FWCZ5000/P101436FWCZ5000_1.jpg",
-      "/src/assets/images/prod/unisex/billeteras/P101436FWCZ5000/P101436FWCZ5000_2.jpg",
-      "/src/assets/images/prod/unisex/billeteras/P101436FWCZ5000/P101436FWCZ5000_3.jpg",
+      "/images/prod/unisex/billeteras/P101436FWCZ5000/P101436FWCZ5000_1.jpg",
+      "/images/prod/unisex/billeteras/P101436FWCZ5000/P101436FWCZ5000_2.jpg",
+      "/images/prod/unisex/billeteras/P101436FWCZ5000/P101436FWCZ5000_3.jpg",
     ],
     attributes: {
       color: "olive",

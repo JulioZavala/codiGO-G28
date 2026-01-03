@@ -2,7 +2,7 @@ export const NAVIGATION_DATA = [
   {
     id: 1,
     label: "Ofertas",
-    img: "/src/assets/images/accesorios.webp",
+    img: "/images/accesorios.webp",
     items: [
       {
         id: 1.1,
@@ -19,7 +19,7 @@ export const NAVIGATION_DATA = [
   {
     id: 2,
     label: "Mujer",
-    img: "/src/assets/images/mujer_S.png",
+    img: "/images/mujer_S.png",
     items: [
       {
         id: 2.1,
@@ -54,7 +54,7 @@ export const NAVIGATION_DATA = [
   {
     id: 3,
     label: "Hombre",
-    img: "/src/assets/images/hombre_S.png",
+    img: "/images/hombre_S.png",
     items: [
       {
         id: 3.1,
