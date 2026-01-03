@@ -61,22 +61,19 @@ const Footer = () => {
             </h3>
             <div className="flex gap-3 items-center invert brightness-0 opacity-50">
               <div className="w-10 h-10 p-1">
-                <img src="/src/assets/images/icons/visa.svg" alt="" />
+                <img src="/images/icons/visa.svg" alt="" />
               </div>
               <div className="w-10 h-10 p-1">
-                <img src="/src/assets/images/icons/mastercard.svg" alt="" />
+                <img src="/images/icons/mastercard.svg" alt="" />
               </div>
               <div className="w-10 h-10 p-1">
-                <img
-                  src="/src/assets/images/icons/americanexpress.svg"
-                  alt=""
-                />
+                <img src="/images/icons/americanexpress.svg" alt="" />
               </div>
               <div className="w-10 h-10 p-1">
-                <img src="/src/assets/images/icons/dinersclub.svg" alt="" />
+                <img src="/images/icons/dinersclub.svg" alt="" />
               </div>
               <div className="w-10 h-10 p-1">
-                <img src="/src/assets/images/icons/yape.svg" alt="" />
+                <img src="/images/icons/yape.svg" alt="" />
               </div>
             </div>
           </div>
@@ -88,28 +85,28 @@ const Footer = () => {
             <div className="flex gap-3 items-center invert brightness-0">
               <a href="#" className="w-10 h-10 p-1 flex ">
                 <img
-                  src="./src/assets/images/icons/tiktok.svg"
+                  src="/images/icons/tiktok.svg"
                   alt="tiktok"
                   className="h-6 opacity-50 hover:opacity-100 transition-opacity"
                 />
               </a>
               <a href="#" className="w-10 h-10 p-1 rounded-sm">
                 <img
-                  src="./src/assets/images/icons/instagram.svg"
+                  src="/images/icons/instagram.svg"
                   alt="instagram"
                   className="opacity-50 hover:opacity-100 transition-opacity"
                 />
               </a>
               <a href="#" className="w-10 h-10 p-1 rounded-sm">
                 <img
-                  src="./src/assets/images/icons/facebook.svg"
+                  src="/images/icons/facebook.svg"
                   alt="facebook"
                   className="opacity-50 hover:opacity-100 transition-opacity"
                 />
               </a>
               <a href="#" className="w-10 h-10 p-1 rounded-sm">
                 <img
-                  src="./src/assets/images/icons/youtube.svg"
+                  src="/images/icons/youtube.svg"
                   alt="youtube"
                   className="opacity-50 hover:opacity-100 transition-opacity"
                 />
@@ -120,7 +117,7 @@ const Footer = () => {
           <div className="flex gap-4 justify-center">
             <Link to="/libroreclamaciones" className="flex items-center">
               <img
-                src="./src/assets/images/icons/libro.svg"
+                src="/images/icons/libro.svg"
                 alt="Libro de Reclamaciones"
                 className="h-15 invert brightness-0 opacity-50 hover:opacity-100 transition-opacity"
               />
