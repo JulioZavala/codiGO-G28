@@ -1,6 +1,6 @@
 import { getUsers } from "@/services/api";
 
-getUsers;
+//getUsers;
 
 export async function validateLogin(email, password) {
   // 1: Traer a todos los usuarios
@@ -29,3 +29,5 @@ export async function validateLogin(email, password) {
     user,
   };
 }
+
+

@@ -25,7 +25,7 @@ const SideDrawer = ({ isOpen, onClose, title, children, side = "right" }) => {
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
             className={`fixed top-0 ${
               isLeft ? "left-0" : "right-0"
-            } h-screen w-full max-w-[320px] bg-white z-200 shadow-2xl flex flex-col`}
+            } h-screen w-full max-w-xs md:max-w-md bg-white z-200 shadow-2xl flex flex-col`}
           >
             {/* Cabecera del Drawer */}
             <div className="p-6 border-b border-gray-100 flex justify-between items-center">

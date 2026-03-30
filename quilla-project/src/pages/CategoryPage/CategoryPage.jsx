@@ -106,7 +106,7 @@ const CategoryPage = () => {
         </header>
         <div className="flex">
           {/* GRILLA DE PRODUCTOS */}
-          <div className="flex-1 lg:pl-8">
+          <div className="flex-1 ">
             {/* Grid Responsiva:
             - 2 columnas en móvil (grid-cols-2)
             - 3 columnas en tablet (md:grid-cols-3)

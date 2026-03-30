@@ -68,26 +68,31 @@ const HeroBanner = ({
         animate="visible"
         className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 z-10"
       >
-        {/* Título Principal */}
-        <motion.h1
-          variants={itemVariants}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-[0.2em] mb-6 leading-tight max-w-4xl"
-        >
-          {title}
-        </motion.h1>
-
-        {/* Subtítulo (Opcional) */}
-        {subtitle && (
-          <motion.p
+        <div className="flex flex-col items-center translate-y-1/6">
+          {/* Título Principal */}
+          <motion.h1
             variants={itemVariants}
-            className="text-xs md:text-sm uppercase tracking-[0.3em] mb-10 font-light max-w-xl"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-[0.2em] mb-6 leading-tight max-w-4xl"
           >
-            {subtitle}
-          </motion.p>
-        )}
+            {title}
+          </motion.h1>
+
+          {/* Subtítulo (Opcional) */}
+          {subtitle && (
+            <motion.p
+              variants={itemVariants}
+              className="text-xs md:text-sm font-light uppercase tracking-[0.3em]  max-w-xl pb-10"
+            >
+              {subtitle}
+            </motion.p>
+          )}
+        </div>
 
         {/* Botón CTA (Call to Action) */}
-        <motion.div variants={itemVariants}>
+        <motion.div
+          variants={itemVariants}
+          className="absolute inset-x-0 bottom-1/10"
+        >
           <Link
             to={ctaLink}
             className="group relative inline-block px-12 py-4 border border-white uppercase tracking-[0.3em] text-xs font-bold overflow-hidden transition-all hover:text-black"
