@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Heart, ChevronLeft, ChevronRight, ShoppingBag } from "lucide-react";
-import { calculatePrice, formatCurrency } from "@/lib/utils";
+import { formatCurrency } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const ProductCard = ({ product }) => {
-  const { name, price, discount, images, id } = product;
+  const { id, name, slug, price, compare_at_price, images } = product;
   const isMobile = useIsMobile();
 
   // Estado para controlar qué imagen se muestra
@@ -13,7 +13,7 @@ const ProductCard = ({ product }) => {
   // Estado para saber si el mouse está encima (para mostrar controles)
   const [isHovered, setIsHovered] = useState(false);
 
-  const { final, hasDiscount } = calculatePrice(price, discount);
+  const hasDiscount = !!compare_at_price;
 
   // MANEJO DEL HOVER
   const handleMouseEnter = () => {
@@ -43,6 +43,8 @@ const ProductCard = ({ product }) => {
     setCurrentImgIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
+  const discountPercentage = Math.round(100 - (price * 100 / compare_at_price));
+
   return (
     <div
       className="group flex flex-col"
@@ -52,9 +54,9 @@ const ProductCard = ({ product }) => {
       {/* --- 1. ZONA DE IMAGEN Y CONTROLES --- */}
       <div className="relative w-full aspect-3/4 overflow-hidden bg-gray-100 mb-3">
         {/* IMAGEN PRINCIPAL */}
-        <Link to={`/producto/${id}`} className="block w-full h-full">
+        <Link to={`/producto/${slug}`} className="block w-full h-full">
           <img
-            src={images[currentImgIndex]}
+            src={images[currentImgIndex]?.image_url}
             alt={name}
             className="w-full h-full object-cover transition-transform duration-700 ease-in-out"
           />
@@ -63,7 +65,7 @@ const ProductCard = ({ product }) => {
         {/* BADGE DE DESCUENTO (Izquierda Superior - Estilo Vélez) */}
         {hasDiscount && (
           <div className="absolute top-4 bg-black text-white text-[10px] font-bold px-2 py-1 uppercase tracking-widest z-20">
-            -{discount}
+            -{discountPercentage}%
           </div>
         )}
         {/* BOTÓN FAVORITOS (Derecha Superior) */}
@@ -131,7 +133,7 @@ const ProductCard = ({ product }) => {
       <div className="flex flex-col gap-1">
         {/* Nombre del Producto */}
         <Link
-          to={`/producto/${id}`}
+          to={`/producto/${slug}`}
           className="text-[11px] text-center uppercase text-gray-600 font-medium hover:text-black truncate"
         >
           {name}
@@ -143,12 +145,12 @@ const ProductCard = ({ product }) => {
             <>
               {/* Precio Original Tachado */}
               <span className="text-xs text-gray-400 line-through decoration-gray-400">
-                {formatCurrency(price)}
+                {formatCurrency(compare_at_price)}
               </span>
 
               {/* Precio Final */}
               <span className="bg-black text-white text-xs font-bold px-2 py-0.5 tracking-wide">
-                {formatCurrency(final)}
+                {formatCurrency(price)}
               </span>
             </>
           ) : (

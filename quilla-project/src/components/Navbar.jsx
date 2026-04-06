@@ -9,6 +9,8 @@ import { Menu } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useScrollThreshold } from "@/hooks/useScrollThreshold";
 import UserContent from "@/components/UserContent";
+import CartDrawer from "./CartDrawer";
+import { useCart } from "@/context/CartContext";
 
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -17,7 +19,8 @@ const Navbar = () => {
   // El header se vuelve sólido SI hay scroll O SI hay hover
   const isSolid = isScrolled || isHovered;
   const isMobile = useIsMobile(); // Solo lo usamos para optimizar carga de datos
-  const [activeDrawer, setActiveDrawer] = useState(null); // null, 'search', 'user', 'cart'
+  const [activeDrawer, setActiveDrawer] = React.useState(null); // null, 'search', 'user', 'cart'
+  const { isDrawerOpen, setIsDrawerOpen } = useCart();
 
   // Clases dinámicas para el contenedor principal
   const headerClasses = `fixed top-0 left-0 w-full py-4 z-[100] transition-all duration-500 ease-in-out border-b ${
@@ -28,6 +31,17 @@ const Navbar = () => {
 
   // Clases dinámicas para el color del texto (blanco sobre fondo oscuro, negro sobre blanco)
   const textColorClass = isSolid ? "text-black" : "text-white";
+
+  // Cuando el contexto diga que el drawer debe abrirse (por añadir producto),
+  // el Navbar activa su propio drawer de 'cart'.
+  React.useEffect(() => {
+    if (isDrawerOpen) {
+      setActiveDrawer("cart");
+      // Reseteamos el flag del contexto para que pueda volver a dispararse
+      setIsDrawerOpen(false); 
+    }
+  }, [isDrawerOpen, setIsDrawerOpen]);
+
 
   return (
     <header
@@ -72,10 +86,10 @@ const Navbar = () => {
           activeDrawer === "menu"
             ? "Quilla"
             : activeDrawer === "search"
-            ? "Buscar"
-            : activeDrawer === "user"
-            ? "Mi Cuenta"
-            : "Bolsa de Compras"
+              ? "Buscar"
+              : activeDrawer === "user"
+                ? "Mi Cuenta"
+                : "Carrito de Compras"
         }
       >
         {activeDrawer === "menu" && (
@@ -95,8 +109,9 @@ const Navbar = () => {
         )}
 
         {activeDrawer === "user" && <UserContent />}
+        {activeDrawer === "cart" && <CartDrawer onClose={() => setActiveDrawer(null)} />}
 
-        {activeDrawer === "cart" && (
+        {/* {activeDrawer === "cart" && (
           <div className="h-full flex flex-col justify-center items-center text-center">
             <p className="text-gray-500 uppercase text-xs tracking-widest">
               Tu bolsa está vacía
@@ -108,7 +123,7 @@ const Navbar = () => {
               Volver a la tienda
             </button>
           </div>
-        )}
+        )} */}
       </SideDrawer>
     </header>
   );

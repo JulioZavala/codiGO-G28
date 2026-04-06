@@ -1,10 +1,19 @@
 import { Link } from "react-router-dom";
 import { Search, User, ShoppingBag } from "lucide-react";
-import useUserStore from "@/stores/useUserStore";
+//import useUserStore from "@/stores/useUserStore";
+import { useAuth } from "../context/AuthContext";
+import { useCart } from "@/context/CartContext";
 
 const NavActions = ({ onOpenDrawer }) => {
-  const cartCount = 19;
-  const { user } = useUserStore();
+  const { totalItems } = useCart();
+  const cartCount = totalItems;
+  //const { user } = useUserStore();
+  const { user } = useAuth();
+  const hasFullName = user?.first_names && user?.paternal_last_name;
+
+  const displayName = hasFullName
+    ? `${user.first_names.split(" ")[0]} ${user.paternal_last_name}`
+    : user?.username;
 
   return (
     <div className="flex justify-end  gap-1.5 lg:flex-col">
@@ -25,7 +34,7 @@ const NavActions = ({ onOpenDrawer }) => {
         <span className="hidden lg:block">
           {
             user
-              ? `${user.firstname} ${user.lastname}` // Si hay usuario
+              ? displayName // Si hay usuario
               : "Mi Cuenta" // Si no hay usuario
           }
         </span>

@@ -1,13 +1,14 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "@/pages/Layout/Layout";
+import AccountLayout from "@/pages/Layout/AccountLayout";
 import Home from "@/pages/Home/Home";
-import Account from "@/pages/Account/Account";
 import Cart from "@/pages/Cart/Cart";
 import ProductDetail from "@/pages/ProductDetail/productDetail";
 import About from "@/pages/About/About";
 import LibroReclamaciones from "@/pages/LibroReclamaciones/LibroReclamaciones";
 import CategoryPage from "@/pages/CategoryPage/CategoryPage";
 import ProtectedRoute from "@/components/auth/ProtectedRoute";
+import Profile from "@/pages/Customer/Customer";
 
 const router = createBrowserRouter([
   {
@@ -18,16 +19,21 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: "cart", element: <Cart /> },
       { path: "about", element: <About /> },
-      { path: "product/:id", element: <ProductDetail /> },
+      { path: "producto/:slug", element: <ProductDetail /> },
 
       // --- RUTA PROTEGIDA: ACCOUNT ---
       {
-        path: "account/:slug",
+        path: "account/",
         element: (
           <ProtectedRoute>
-            <Account />
+            <AccountLayout />
           </ProtectedRoute>
         ),
+        children: [
+          { path: "profile", element: <Profile /> },
+        //   { path: "direcciones", element: <Addresses /> },
+        //   { path: "orders", element: <Orders /> },
+        ],
       },
       //Categorías Dinámicas
       {
