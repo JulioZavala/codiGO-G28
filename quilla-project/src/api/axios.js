@@ -29,8 +29,14 @@ const api = axios.create({
 // INTERCEPTOR: Inyecta el token CSRF manualmente en cada petición
 api.interceptors.request.use((config) => {
   const csrfToken = getCookie("csrftoken");
+
+  // LOG DE INGENIERÍA:
+  console.log("Cookie CSRF leída:", csrfToken);
+
   if (csrfToken) {
     config.headers["X-CSRFToken"] = csrfToken;
+  } else {
+    console.warn("¡OJO! No se encontró la cookie csrftoken. Revisa HttpOnly.");
   }
   return config;
 });
